@@ -41,7 +41,7 @@ namespace InOutLib
 
             foreach (string text in this.Lines)
             {
-                if (!string.IsNullOrEmpty(text))
+                if (text.Count() == 0)
                 {
                     throw new CsvHelper.StructureException();
                 }
