@@ -45,6 +45,10 @@ namespace InOutLib
                 {
                     throw new CsvHelper.StructureException();
                 }
+                if (text.Count() < 3)
+                {
+                    throw new InOutLib.StructureException();
+                }
             }
             //throw new InOutLib.StructureException();
         }
