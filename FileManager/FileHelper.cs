@@ -3,8 +3,8 @@
     public class FileHelper
     {
         #region private attributs
-        private string _path;//to the file
-        private string _fileName;
+        protected string _path;//to the file
+        protected string _fileName;
         protected string _fullPath;//concat path + filename
         private List<string> _lines = new List<string>();//file content extracted
         #endregion private attributs
@@ -30,7 +30,7 @@
             }
         }
 
-        public void ExtractFileContent()
+        virtual public void ExtractFileContent()
         {
             StreamReader streamReader = new StreamReader(_fullPath);
             string line;
